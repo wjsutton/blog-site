@@ -1,99 +1,218 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+  <a href="https://jodie.lekoarts.de">
+    <img alt="LekoArts" src="https://img.lekoarts.de/gatsby/gatsby-site-illustration.png" />
   </a>
 </p>
 <h1 align="center">
-  Gatsby's default starter
+  Gatsby Starter Portfolio: Jodie
 </h1>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+<p align="center">
+  <a href="https://github.com/LekoArts/gatsby-starter-portfolio-jodie/blob/master/LICENSE">
+    <img src="https://img.shields.io/badge/license-0BSD-blue.svg" alt="Gatsby Starter Portfolio: Jodie is released under the 0BSD license." />
+  </a>
+  <a href="https://github.com/sponsors/LekoArts">
+    <img alt="GitHub Sponsors" src="https://img.shields.io/github/sponsors/LekoArts">
+  </a>
+  <a href="https://www.lekoarts.de?utm_source=jodie&utm_medium=Starter">
+    <img alt="Website" src="https://img.shields.io/badge/-website-blue">
+  </a>
+  <a href="https://twitter.com/intent/follow?screen_name=lekoarts_de">
+    <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
+  </a>
+</p>
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
+Image-heavy photography portfolio with colorful accents & customizable pages. Includes adaptive image grids powered by CSS grid and automatic image integration into projects. Using the Gatsby Theme [`@lekoarts/gatsby-theme-jodie`](https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-jodie).
 
-## 🚀 Quick start
+[**Demo Website**](https://jodie.lekoarts.de)
 
-1.  **Create a Gatsby site.**
+Also be sure to check out other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de) and my [Personal Website](https://www.lekoarts.de?utm_source=jodie&utm_medium=Starter).
 
-    Use the Gatsby CLI ([install instructions](https://www.gatsbyjs.com/docs/tutorial/part-0/#gatsby-cli)) to create a new site, specifying the default starter.
+## ✨ Features
 
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
+- MDX
+- Fully customizable through the usage of Gatsby Themes (and Theme UI)
+- Create a project by creating an MDX file and dropping the images into the same folder
+- Extensible custom pages
+- Define colors for each page and the sidebar & content will adapt while maintaining WCAG 2 AA contrast ratios
+- SEO (Sitemap, OpenGraph tags, Twitter tags)
+- WebApp Manifest
 
-1.  **Start developing.**
+## 🚀 Getting Started
 
-    Navigate into your new site’s directory and start it up.
+[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/LekoArts/gatsby-starter-portfolio-jodie)
 
-    ```shell
-    cd my-default-starter/
-    gatsby develop
-    ```
+### 1. **Create a Gatsby site.**
 
-1.  **Open the source code and start editing!**
+Use the Gatsby CLI to clone the site and install dependencies:
 
-    Your site is now running at `http://localhost:8000`!
+```sh
+npx gatsby new gatsby-starter-portfolio-jodie https://github.com/LekoArts/gatsby-starter-portfolio-jodie
+```
 
-    Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby Tutorial](https://www.gatsbyjs.com/docs/tutorial/part-4/#use-graphiql-to-explore-the-data-layer-and-write-graphql-queries).
+### 2. **Navigate to your new project.**
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+```sh
+cd gatsby-starter-portfolio-jodie
+```
 
-## 🚀 Quick start (Gatsby Cloud)
+### 3. **Open the code and start customizing!**
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+Start the site by running `npm run develop`.
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-default)
+Your site is now running at `http://localhost:8000`!
 
-## 🧐 What's inside?
+If you want to learn more about how you can use a Gatsby starter that is configured with a Gatsby theme, you can check out this [shorter](https://www.gatsbyjs.com/docs/how-to/plugins-and-themes/using-a-gatsby-theme/) or [longer](https://www.gatsbyjs.com/tutorial/using-a-theme/) tutorial. The tutorials don't exactly apply to this starter however the concepts are the same.
 
-A quick look at the top-level files and directories you'll see in a typical Gatsby project.
+## 📝 Using and modifying this starter
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package.json
-    └── README.md
+**Important Note:** Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.com/docs/how-to/plugins-and-themes/shadowing/) to understand how to customize the underlying theme!
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+This starter creates a new Gatsby site that installs and configures the theme [`@lekoarts/gatsby-theme-jodie`](https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-jodie).
 
-1.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+Have a look at the theme's README and files to see what options are available and how you can shadow the various components including Theme UI. Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-jodie/` to shadow/override files. The Theme UI config can be configured by shadowing its files in `src/gatsby-plugin-theme-ui/`.
 
-1.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+### Changing the logo
 
-1.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+Edit the file at `src/@lekoarts/gatsby-theme-jodie/icons/logo.jsx`.
 
-1.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/) for more detail).
+### Changing your fonts
 
-1.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+By default, the underlying theme and thus this starter uses "Work Sans" as its font. It's used throughout the site and set as a `font-family` on the `html` element.
 
-1.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+If you want to change your default font or add any additional fonts, you'll need to change a couple of things:
 
-1.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
+1. Font file inside `static/fonts`
+1. Preload link inside `gatsby-ssr.js` (the name of the font file)
+1. CSS in `global.css`
+1. The Theme UI config and its `fonts` key (see [Theme UI Typography Docs](https://theme-ui.com/theming#typography))
 
-1.  **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+For the sake of this explanation it's assumed that you replaced "Work Sans" with "Roboto Mono".
 
-1.  **`README.md`**: A text file containing useful reference information about your project.
+Change the file `src/gatsby-plugin-theme-ui/index.js` with the following contents:
+
+```js
+// Inside src/gatsby-plugin-theme-ui/index.js
+import { merge } from "theme-ui";
+import originalTheme from "@lekoarts/gatsby-theme-jodie/src/gatsby-plugin-theme-ui/index";
+
+const theme = merge(originalTheme, {
+  fonts: {
+    body: `"Roboto Mono", monospace`,
+  },
+});
+
+export default theme;
+```
+
+As defined in the [Theme Specification](https://theme-ui.com/theme-spec#typography) `body` is the default body font family.
+
+**Another example:** You didn't replace "Work Sans" but added "Roboto Mono" additionally since you want to use it for your headings.
+
+Then you'd not overwrite `body` but add a `heading` key:
+
+```js
+// Inside src/gatsby-plugin-theme-ui/index.js
+import { merge } from "theme-ui";
+import originalTheme from "@lekoarts/gatsby-theme-jodie/src/gatsby-plugin-theme-ui/index";
+
+const theme = merge(originalTheme, {
+  fonts: {
+    heading: `"Roboto Mono", monospace`,
+  },
+});
+
+export default theme;
+```
+
+### Customizing the homepage
+
+Both your projects and pages are displayed on the homepage (located at `/` in the live project and [`src/components/homepage.tsx`](https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-jodie/src/components/homepage.tsx) in the theme itself). Of course, you can always shadow this and other files to customize the theme to your liking.
+
+However, before completely overriding the homepage you should consider the three available options:
+
+1. `homepagePageLimit`
+2. `homepageProjectLimit`
+3. Shadowing [`modify-grid.ts`](https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-jodie/src/utils/modify-grid.ts)
+
+The options 1) and 2) are explained in the theme options -- they limit the number of projects and pages that will randomly be distributed on the page.
+
+Option 3) is a really powerful one! The `modifyGrid` function is wrapping the entire array of projects & pages before passing it to the `render` function of the React component. Or in other words: As the name suggests you can modify the items that are passed to the grid on the homepage.
+
+You can achieve this by shadowing [`modify-grid.ts`](https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-jodie/src/utils/modify-grid.ts): Create a file at `src/@lekoarts/gatsby-theme-jodie/utils/modify-grid.js` and define a default export for `modifyGrid`.
+
+#### `modifyGrid` examples
+
+_All code snippets are placed inside `src/@lekoarts/gatsby-theme-jodie/utils/modify-grid.js`_
+
+**Default behavior:**
+
+```js
+const modifyGrid = (data) => data;
+
+export default modifyGrid;
+```
+
+I've also created some resolver templates that you can use. They are exported in [`resolver-templates.ts`](https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-jodie/src/utils/resolver-templates.ts). They cover the most common use cases and can give you an idea on what to do with the resolver.
+
+**Only pages / Only projects:**
+
+```js
+import {
+  onlyPages,
+  onlyProjects,
+} from "@lekoarts/gatsby-theme-jodie/src/utils/resolver-templates";
+
+const modifyGrid = (data) => onlyPages(data);
+// const modifyGrid = (data) => onlyProjects(data)
+
+export default modifyGrid;
+```
+
+**Filter by slug:**
+
+```js
+import { filterBySlug } from "@lekoarts/gatsby-theme-jodie/src/utils/resolver-templates";
+
+const modifyGrid = (data) => filterBySlug(data, ["/about"]);
+
+export default modifyGrid;
+```
+
+**Shuffle:**
+
+```js
+import { shuffle } from "@lekoarts/gatsby-theme-jodie/src/utils/resolver-templates";
+
+const modifyGrid = (data) => shuffle(data);
+
+export default modifyGrid;
+```
+
+### Change your `static` folder
+
+The `static` folder contains the icons, social media images and `robots.txt`. Don't forget to change these files, too! You can use [Real Favicon Generator](https://realfavicongenerator.net/) to generate the image files inside `static`.
+
+## 🤔 Questions or problems?
+
+If you have general questions or need help with Gatsby, please go to one of the [support platforms](https://www.gatsbyjs.com/contributing/community/#where-to-get-support) mentioned in Gatsby's documentation. If you have a specific question about this project, you can head to the [GitHub Discussions](https://github.com/LekoArts/gatsby-themes/discussions) of the repository.
 
 ## 🎓 Learning Gatsby
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
+Looking for more guidance? Full documentation for Gatsby lives [on Gatsby's website](https://www.gatsbyjs.com/).
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+### Themes
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+To learn more about Gatsby themes specifically, I recommend checking out the [theme docs](https://www.gatsbyjs.com/docs/themes/).
 
-## 💫 Deploy
+### General
 
-[Build, Deploy, and Host On The Only Cloud Built For Gatsby](https://www.gatsbyjs.com/products/cloud/)
+- **For most developers, I recommend starting with the [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/docs/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
 
-Gatsby Cloud is an end-to-end cloud platform specifically built for the Gatsby framework that combines a modern developer experience with an optimized, global edge network.
+- **To dive straight into code samples, head [to Gatsby's documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _How-to Guides_ and _Reference_ items in the primary navigation.
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+## 🌟 Supporting me
+
+Thanks for using this project! I'm always interested in seeing what people do with my projects, so don't hesitate to tag me on [Twitter](https://twitter.com/lekoarts_de) and share the project with me.
+
+Please star this project, share it on Social Media or consider supporting me on [Patreon](https://www.patreon.com/lekoarts) or [GitHub Sponsor](https://github.com/sponsors/LekoArts)!

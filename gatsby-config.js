@@ -1,43 +1,75 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
- */
+require(`dotenv`).config()
+
+const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    // You can overwrite values here that are used for the SEO component
+    // You can also add new values here to query them like usual
+    // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-jodie/gatsby-config.js
+    siteTitle: `Jodie`,
+    siteTitleAlt: `Jodie - Gatsby Starter Portfolio`,
+    siteHeadline: `Jodie - Gatsby Theme from @lekoarts`,
+    siteUrl: `https://jodie.lekoarts.de`,
+    siteDescription: `Image-heavy photography portfolio with colorful accents & customizable pages. Includes adaptive image grids powered by CSS grid and automatic image integration into projects.`,
+    siteImage: `/banner.jpg`,
+    author: `@lekoarts_de`,
   },
+  trailingSlash: `never`,
   plugins: [
-    `gatsby-plugin-image`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `@lekoarts/gatsby-theme-jodie`,
+      // See the theme's README for all available options
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        navigation: [
+          { name: `Projects`, slug: `/projects` },
+          { name: `Art`, slug: `/art` },
+          { name: `About`, slug: `/about` },
+        ],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/`,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `jodie - @lekoarts/gatsby-theme-jodie`,
+        short_name: `jodie`,
+        description: `Image-heavy photography portfolio with colorful accents & customizable pages. Includes adaptive image grids powered by CSS grid and automatic image integration into projects.`,
         start_url: `/`,
-        background_color: `#663399`,
+        background_color: `#ffffff`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        // theme_color: `#b75e09`,
+        display: `standalone`,
+        icons: [
+          {
+            src: `/android-chrome-192x192.png`,
+            sizes: `192x192`,
+            type: `image/png`,
+          },
+          {
+            src: `/android-chrome-512x512.png`,
+            sizes: `512x512`,
+            type: `image/png`,
+          },
+        ],
       },
     },
-  ],
+    shouldAnalyseBundle && {
+      resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
+      options: {
+        analyzerMode: `static`,
+        reportFilename: `_bundle.html`,
+        openAnalyzer: false,
+      },
+    },
+  ].filter(Boolean),
 }
